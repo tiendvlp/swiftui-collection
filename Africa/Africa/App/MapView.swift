@@ -43,6 +43,8 @@ struct MapView: View {
             }
             
         }//: Map
+        .edgesIgnoringSafeArea(.bottom)
+        .edgesIgnoringSafeArea(.top)
         .overlay(HStack {
             Image("compass")
                         .resizable()
@@ -81,6 +83,8 @@ struct MapView: View {
                     .padding()
                  ,alignment: .top
         )
+        
+
     }
 }
 
