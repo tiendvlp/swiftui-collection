@@ -57,5 +57,6 @@ struct FruitDetailView: View {
 struct FruitDetailView_Previews: PreviewProvider {
     static var previews: some View {
         FruitDetailView(fruit: fruitsData.first!)
+            .previewDevice("iPhone 12 Pro")
     }
 }

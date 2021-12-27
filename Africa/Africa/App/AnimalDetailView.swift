@@ -48,7 +48,32 @@ struct AnimalDetailView: View {
                     .padding(.horizontal)
                     .padding(.vertical, 12)
                         
-                
+                    //MARK: - FACT
+                    Group {
+                        HeadingView(headingImage: "questionmark.circle", headingText: "Did you know")
+                            .padding()
+                        InsetFactView(animal: animal)
+                    }
+                    
+                    //MARK: - DESCRIPTION
+                    Group {
+                        HeadingView(headingImage: "info.circle", headingText: "All about \(animal.name)")
+                            .padding()
+                        Text(animal.description)
+                            .multilineTextAlignment(.leading)
+                            .layoutPriority(1)
+                    }.padding(.horizontal)
+                    //MARK: - MAP
+                    Group {
+                        HeadingView(headingImage: "map", headingText: "National Parks")
+                            .padding()
+                        InsetMapView()
+                    }
+                    //MARK: - LINK
+                    Group {
+                        HeadingView(headingImage: "book.vertical", headingText: "Learn more")
+                        ExternalWeblinkView(animal: animal)
+                    }
                       
                 }//: VStack
                 .navigationBarTitle("Learn about \(animal.name)", displayMode: .inline)

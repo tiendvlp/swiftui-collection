@@ -44,5 +44,6 @@ struct SettingViews: View {
 struct SettingViews_Previews: PreviewProvider {
     static var previews: some View {
         SettingViews()
+            .previewDevice("iPhone 12 Pro")
     }
 }
