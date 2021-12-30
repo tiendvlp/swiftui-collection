@@ -44,6 +44,8 @@ struct ContentView: View {
                     CoverImageView()
                         .frame(height: 300)
                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                        .listRowBackground(Color.black)
+
                     
                     ForEach(animals) {item in
                         NavigationLink(destination: {
@@ -53,8 +55,15 @@ struct ContentView: View {
                                 .padding(.vertical, 6)
                                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         }//: NAVIGATION LINK
+                        .listRowBackground(Color.black)
                     }//: LOOP
+                   
+                    CreditsView()
+                        .modifier(CenterModifier())
+                        .listRowBackground(Color.black)
+
                 }//: LIST
+                .background(.black)
             } else {
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
@@ -99,7 +108,6 @@ struct ContentView: View {
                     }
                 }
             }
-
         }
 
     }
