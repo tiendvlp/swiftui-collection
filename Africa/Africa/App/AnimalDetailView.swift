@@ -70,13 +70,16 @@ struct AnimalDetailView: View {
                         InsetMapView()
                     }
                     //MARK: - LINK
-                    Group {
-                        HeadingView(headingImage: "book.vertical", headingText: "Learn more")
-                        ExternalWeblinkView(animal: animal)
+                        Group {
+                            HeadingView(headingImage: "book.vertical", headingText: "Learn more")
+                            NavigationLink(destination: AfricaWebView(animal: animal)) {
+                                ExternalWeblinkView(animal: animal)
+                        }
                     }
                       
                 }//: VStack
                 .navigationBarTitle("Learn about \(animal.name)", displayMode: .inline)
+                .padding(.bottom, 42)
             }//: SCROLLVIEW
             
         

@@ -20,7 +20,8 @@ struct ExternalWeblinkView: View {
                 
                 Group {
                     Image(systemName: "arrow.up.right.square")
-                    Link(animal.name, destination: (URL(string: animal.link) ?? URL(string: "https://wikipedia.com"))!)
+                    Text(animal.name)
+//                    Link(animal.name, destination: (URL(string: animal.link) ?? URL(string: "https://wikipedia.com"))!)
                 }
             }
             .foregroundColor(.accentColor)

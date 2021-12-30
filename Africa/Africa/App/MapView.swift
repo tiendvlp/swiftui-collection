@@ -21,7 +21,7 @@ struct MapView: View {
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: location) { item in
             //Option A: Default pin
-            //MapPin(coordinate: item.location, tint: .accentColor)
+//            MapPin(coordinate: item.location, tint: .accentColor)
             //Option B: More easy
             // MapMarker(coordinate: item.location, tint: .accentColor)
             //Option C: Custom pin
@@ -36,7 +36,7 @@ struct MapView: View {
             MapAnnotation (coordinate: item.location) {
                 MapAnnotationView(location: item).onTapGesture {
                     withAnimation(.easeIn) {
-                    region.span = MKCoordinateSpan(latitudeDelta: (region.span.latitudeDelta > 10 ? region.span.latitudeDelta - 10 : 0), longitudeDelta: region.span.longitudeDelta > 10 ? region.span.longitudeDelta - 10 : 0)
+                    region.span = MKCoordinateSpan(latitudeDelta: (region.span.latitudeDelta > 20 ? region.span.latitudeDelta - 20 : 0), longitudeDelta: region.span.longitudeDelta > 20 ? region.span.longitudeDelta - 20 : 0)
                     region.center = CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)
                     }
                 }

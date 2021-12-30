@@ -9,25 +9,76 @@ import SwiftUI
 
 struct ContentView: View {
     let animals: [AnimalModel] = Bundle.main.decode("animals.json")
+    @AppStorage("isGridViewActive") private var isGridViewActive: Bool = false
+    let haptic = UIImpactFeedbackGenerator(style: .medium)
+
+    @State private var gridLayout: [GridItem] = [GridItem(.flexible())]
+    @State private var gridColumn: Int = 1
+    @State private var toolbarIcon: String = "square.grid.2x2"
+    
     var body: some View {
         NavigationView {
-            
-            List {
-                CoverImageView()
-                    .frame(height: 300)
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
-                
-                ForEach(animals) {item in
-                    NavigationLink(destination: {
-                        AnimalDetailView(animal: item)
-                    }){
-                        AnimalListItemView(animal: item)
-                            .padding(.vertical, 6)
-                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+
+        Group {
+            if !isGridViewActive{
+                List {
+                    CoverImageView()
+                        .frame(height: 300)
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                    
+                    ForEach(animals) {item in
+                        NavigationLink(destination: {
+                            AnimalDetailView(animal: item)
+                        }){
+                            AnimalListItemView(animal: item)
+                                .padding(.vertical, 6)
+                                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        }//: NAVIGATION LINK
+                    }//: LOOP
+                }//: LIST
+            } else {
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
+                        ForEach(animals) {animal in
+                            NavigationLink (destination: AnimalDetailView(animal: animal)) {
+                                AnimalGridItemView(animal: animal)
+                            }//: LINK
+                        }//: LOOP
+                    }//: LAZY GRID
+                    .padding(10)
+                    .animation(.easeIn)
+                }// SCROLLVIEW
+            } //: CONDITION
+        }
+            .navigationBarTitle("Africa", displayMode: .large)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack (spacing: 16) {
+                        Button {
+                            print("Hello")
+                            isGridViewActive = false
+                            haptic.impactOccurred()
+                        } label: {
+                            Image(systemName: "square.fill.text.grid.1x2")
+                                .font(.title2)
+                                .frame(width: 20, height: 20, alignment: .center)
+                                .foregroundColor(isGridViewActive ? .primary : .accentColor)
+                        }//: BUTTON
+
+                        // GRID
+                        Button {
+                            print("Hello")
+                            isGridViewActive = true
+                            haptic.impactOccurred()
+                        } label: {
+                            Image(systemName: "square.grid.2x2")
+                                .font(.title2)
+                                .frame(width: 20, height: 20, alignment: .center)
+                            .foregroundColor(isGridViewActive ? .primary : .accentColor)                        }
+
                     }
                 }
             }
-            .navigationBarTitle("Africa", displayMode: .large)
 
         }
 

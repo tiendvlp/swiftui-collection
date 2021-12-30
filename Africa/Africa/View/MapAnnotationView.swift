@@ -16,7 +16,7 @@ struct MapAnnotationView: View {
         ZStack {
             Circle()
                 .fill(Color.accentColor)
-                .frame(width: 54, height: 54, alignment: .center)
+                .frame(width: 55, height: 55, alignment: .center)
             Circle()
                 .fill(Color.accentColor)
                 .frame(width: 52, height: 52, alignment: .center)
