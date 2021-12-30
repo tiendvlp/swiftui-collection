@@ -16,6 +16,25 @@ struct ContentView: View {
     @State private var gridColumn: Int = 1
     @State private var toolbarIcon: String = "square.grid.2x2"
     
+    //MARK: - FUNCTION
+    func gridSwitch () {
+        gridLayout = Array(repeating: .init(.flexible()), count: gridColumn % 3 + 1)
+        gridColumn = gridLayout.count
+
+        print("Grid Number: \(gridColumn)")
+        
+        switch gridColumn {
+        case 1:
+            toolbarIcon = "square.grid.2x2"
+        case 2:
+            toolbarIcon = "square.grid.3x2"
+        case 3:
+            toolbarIcon = "rectangle.grid.1x2"
+        default:
+            toolbarIcon = "square.grid.2x2"
+        }
+        
+    }
     var body: some View {
         NavigationView {
 
@@ -65,16 +84,17 @@ struct ContentView: View {
                                 .foregroundColor(isGridViewActive ? .primary : .accentColor)
                         }//: BUTTON
 
-                        // GRID
+                        
                         Button {
                             print("Hello")
                             isGridViewActive = true
                             haptic.impactOccurred()
+                            gridSwitch()
                         } label: {
-                            Image(systemName: "square.grid.2x2")
+                            Image(systemName: toolbarIcon)
                                 .font(.title2)
                                 .frame(width: 20, height: 20, alignment: .center)
-                            .foregroundColor(isGridViewActive ? .primary : .accentColor)                        }
+                            .foregroundColor(isGridViewActive ? .accentColor : .primary)                        }
 
                     }
                 }
