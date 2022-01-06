@@ -10,11 +10,15 @@ import SwiftUI
 struct NavigationBarView: View {
     //MARK: - PROPERTIES
     @State private var isAnimated: Bool = false
+    @EnvironmentObject var shop: Shop
     //MARK: - BODY
     var body: some View {
         HStack {
             Button {
-                
+                withAnimation (.easeOut) {
+                    shop.selectedProduct = nil
+                    shop.showingProduct = false
+                }
             } label: {
                 Image(systemName: "magnifyingglass")
                     .font(.title)
@@ -57,5 +61,6 @@ struct NavigationBarView: View {
 struct NavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationBarView()
+            .environmentObject(Shop())
     }
 }
