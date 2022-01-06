@@ -14,6 +14,7 @@ struct NavigationBarDetailView: View {
    var body: some View {
         HStack {
             Button {
+                feedback.impactOccurred()
                 withAnimation (.easeOut) {
                     shop.selectedProduct = nil
                     shop.showingProduct = false

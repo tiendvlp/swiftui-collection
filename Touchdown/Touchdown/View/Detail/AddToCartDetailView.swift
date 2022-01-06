@@ -13,7 +13,8 @@ struct AddToCartDetailView: View {
     //MARK: - BODY
     var body: some View {
         Button {
-            
+            feedback.impactOccurred()
+
         } label: {
             Spacer()
             Text("Add to cart")
