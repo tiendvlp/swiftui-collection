@@ -34,7 +34,7 @@ struct ContentView: View {
                             }//: LOOP
                         }//: GRID
                         .padding(15)
-                        
+                        BrandGridView()
                         FooterView()
                             .padding(.horizontal)
                     }
