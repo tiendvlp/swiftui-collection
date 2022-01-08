@@ -30,7 +30,6 @@ struct ContentView: View {
                             CategoryGridView()
                             TitleView(title: "Helmets")
                             Spacer()
-                            
                             LazyVGrid(columns: gridLayout) {
                                 ForEach(products) {product in
                                     ProductItemView(product: product)

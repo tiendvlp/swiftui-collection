@@ -21,7 +21,6 @@ struct ProductItemView: View {
             }//: ZSTACK
             .background(Color(red: product.red, green: product.green, blue: product.blue))
             .cornerRadius(12)
-            
             // NAME
             Text(product.name)
                 .font(.title3)
