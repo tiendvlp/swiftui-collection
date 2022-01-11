@@ -54,6 +54,7 @@ struct NewTaskItemView: View {
                 
                 Button {
                     addItem()
+                    feedBack.notificationOccurred(.success)
                     playSound(sound: "sound-ding", type: "mp3")
                 } label: {
                     Spacer()
@@ -64,6 +65,7 @@ struct NewTaskItemView: View {
                 .disabled(isButtonDisable)
                 .onTapGesture {
                     if isButtonDisable {
+                        feedBack.notificationOccurred(.warning)
                         playSound(sound: "sound-tap", type: "mp3")
                     }
                 }
