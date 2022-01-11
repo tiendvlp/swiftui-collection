@@ -13,6 +13,7 @@
 		C6945DAE278DC625003FED6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6945DAD278DC625003FED6B /* Preview Assets.xcassets */; };
 		C6945DB0278DC625003FED6B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DAF278DC625003FED6B /* Persistence.swift */; };
 		C6945DB3278DC625003FED6B /* Avocados.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6945DB1278DC625003FED6B /* Avocados.xcdatamodeld */; };
+		C6945DBA278DD041003FED6B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6945DB9278DD041003FED6B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C6945DAD278DC625003FED6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6945DAF278DC625003FED6B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		C6945DB2278DC625003FED6B /* Avocados.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Avocados.xcdatamodel; sourceTree = "<group>"; };
+		C6945DB9278DD041003FED6B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				C6945DAF278DC625003FED6B /* Persistence.swift */,
 				C6945DB1278DC625003FED6B /* Avocados.xcdatamodeld */,
 				C6945DAC278DC625003FED6B /* Preview Content */,
+				C6945DB9278DD041003FED6B /* Launch Screen.storyboard */,
 			);
 			path = Avocados;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6945DBA278DD041003FED6B /* Launch Screen.storyboard in Resources */,
 				C6945DAE278DC625003FED6B /* Preview Assets.xcassets in Resources */,
 				C6945DAB278DC625003FED6B /* Assets.xcassets in Resources */,
 			);
@@ -283,6 +287,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -313,6 +318,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
