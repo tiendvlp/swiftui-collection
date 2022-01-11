@@ -62,6 +62,7 @@ struct ContentView: View {
                         Button {
                             withAnimation(.easeOut) {
                                 isDarkMode.toggle()
+                                playSound(sound: "sound-tap", type: "mp3")
                             }
                         } label: {
                             Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
@@ -77,6 +78,7 @@ struct ContentView: View {
                     //MARK: - NEW TASK BUTTON
                     Button {
                         showNewTaskItem = true
+                        playSound(sound: "sound-ding", type: "mp3")
                     } label: {
                         Image(systemName: "plus.circle")
                             .font(.system(size: 30, weight: .semibold, design: .rounded))
@@ -101,30 +103,35 @@ struct ContentView: View {
                         }//: LOOP
                         .onDelete(perform: deleteItems)
                     }//: LIST
+                    
                     .listStyle(InsetGroupedListStyle())
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.3), radius: 12)
                     .frame(maxWidth: 640)
                 }//: VSTACK
-                .onAppear(perform: {
-                    UITableView.appearance().backgroundColor = UIColor.clear
-                })
-                .navigationTitle("Daily Tasks")
-                .navigationBarHidden(true)
-                    .background(BackgroundImageView())
-                    .background(backgroundGradient.ignoresSafeArea(.all))
+                .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
+                .transition(.move(edge: .bottom))
+                
                 //MARK: - NEW TASK ITEM
                 if showNewTaskItem {
-                    BlankView()
+                    BlankView(
+                        backgroundColor: isDarkMode ? Color.black : Color.gray,
+                        backgroundOpacity: isDarkMode ? 0.3 : 0.5)
                         .onTapGesture {
-                            withAnimation(.easeOut(duration: 1000)) {
-                                hideKeyboard()
+                            hideKeyboard()
                                 showNewTaskItem = false
-                            }
                         }
+                    
                     NewTaskItemView(isShowing: $showNewTaskItem)
                 }
-            }//: ZSTACk
-            Text("Select an item")
+            }//: ZSTACK
+            .onAppear(perform: {
+                UITableView.appearance().backgroundColor = UIColor.clear
+            })
+            .navigationTitle("Daily Tasks")
+            .navigationBarHidden(true)
+            .background(BackgroundImageView()
+                            .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false))
+            .background(backgroundGradient.ignoresSafeArea(.all))
         }//: NAVIGATION VIEW
         .navigationViewStyle(StackNavigationViewStyle())
     }
