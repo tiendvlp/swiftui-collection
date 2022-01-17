@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61D4B3A2793C75200ADDC3E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61D4B392793C75200ADDC3E /* HeaderView.swift */; };
 		C6945DA7278DC624003FED6B /* AvocadosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DA6278DC624003FED6B /* AvocadosApp.swift */; };
 		C6945DA9278DC624003FED6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DA8278DC624003FED6B /* ContentView.swift */; };
 		C6945DAB278DC625003FED6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6945DAA278DC625003FED6B /* Assets.xcassets */; };
@@ -14,9 +15,18 @@
 		C6945DB0278DC625003FED6B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DAF278DC625003FED6B /* Persistence.swift */; };
 		C6945DB3278DC625003FED6B /* Avocados.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6945DB1278DC625003FED6B /* Avocados.xcdatamodeld */; };
 		C6945DBA278DD041003FED6B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6945DB9278DD041003FED6B /* Launch Screen.storyboard */; };
+		C6945DBF278E6AC3003FED6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DBE278E6AC3003FED6B /* MainView.swift */; };
+		C6945DC1278E6AE5003FED6B /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DC0278E6AE5003FED6B /* RecipesView.swift */; };
+		C6945DC3278E6B08003FED6B /* RepeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DC2278E6B08003FED6B /* RepeningView.swift */; };
+		C6945DC5278E6B17003FED6B /* AvocadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DC4278E6B17003FED6B /* AvocadosView.swift */; };
+		C6945DC7278E6B25003FED6B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6945DC6278E6B25003FED6B /* SettingsView.swift */; };
+		C6A457572795BB79002B11C8 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A457562795BB79002B11C8 /* HeaderModel.swift */; };
+		C6A457592795BBA9002B11C8 /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A457582795BBA9002B11C8 /* HeaderData.swift */; };
+		C6A4575B2795C181002B11C8 /* DishesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A4575A2795C181002B11C8 /* DishesItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C61D4B392793C75200ADDC3E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C6945DA3278DC624003FED6B /* Avocados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avocados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6945DA6278DC624003FED6B /* AvocadosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosApp.swift; sourceTree = "<group>"; };
 		C6945DA8278DC624003FED6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +35,14 @@
 		C6945DAF278DC625003FED6B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		C6945DB2278DC625003FED6B /* Avocados.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Avocados.xcdatamodel; sourceTree = "<group>"; };
 		C6945DB9278DD041003FED6B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C6945DBE278E6AC3003FED6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C6945DC0278E6AE5003FED6B /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		C6945DC2278E6B08003FED6B /* RepeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeningView.swift; sourceTree = "<group>"; };
+		C6945DC4278E6B17003FED6B /* AvocadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosView.swift; sourceTree = "<group>"; };
+		C6945DC6278E6B25003FED6B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C6A457562795BB79002B11C8 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
+		C6A457582795BBA9002B11C8 /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
+		C6A4575A2795C181002B11C8 /* DishesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +75,11 @@
 		C6945DA5278DC624003FED6B /* Avocados */ = {
 			isa = PBXGroup;
 			children = (
-				C6945DA6278DC624003FED6B /* AvocadosApp.swift */,
-				C6945DA8278DC624003FED6B /* ContentView.swift */,
+				C6A457552795BB6F002B11C8 /* Model */,
+				C6945DBD278E693D003FED6B /* Data */,
+				C6945DBC278E692B003FED6B /* Views */,
+				C6945DBB278E6926003FED6B /* App */,
 				C6945DAA278DC625003FED6B /* Assets.xcassets */,
-				C6945DAF278DC625003FED6B /* Persistence.swift */,
-				C6945DB1278DC625003FED6B /* Avocados.xcdatamodeld */,
 				C6945DAC278DC625003FED6B /* Preview Content */,
 				C6945DB9278DD041003FED6B /* Launch Screen.storyboard */,
 			);
@@ -74,6 +92,47 @@
 				C6945DAD278DC625003FED6B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C6945DBB278E6926003FED6B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C6945DA8278DC624003FED6B /* ContentView.swift */,
+				C6945DA6278DC624003FED6B /* AvocadosApp.swift */,
+				C6945DBE278E6AC3003FED6B /* MainView.swift */,
+				C6945DC0278E6AE5003FED6B /* RecipesView.swift */,
+				C6945DC2278E6B08003FED6B /* RepeningView.swift */,
+				C6945DC4278E6B17003FED6B /* AvocadosView.swift */,
+				C6945DC6278E6B25003FED6B /* SettingsView.swift */,
+				C61D4B392793C75200ADDC3E /* HeaderView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C6945DBC278E692B003FED6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6A4575A2795C181002B11C8 /* DishesItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6945DBD278E693D003FED6B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C6945DAF278DC625003FED6B /* Persistence.swift */,
+				C6945DB1278DC625003FED6B /* Avocados.xcdatamodeld */,
+				C6A457582795BBA9002B11C8 /* HeaderData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C6A457552795BB6F002B11C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6A457562795BB79002B11C8 /* HeaderModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,10 +206,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6945DC5278E6B17003FED6B /* AvocadosView.swift in Sources */,
+				C6A457572795BB79002B11C8 /* HeaderModel.swift in Sources */,
 				C6945DB0278DC625003FED6B /* Persistence.swift in Sources */,
 				C6945DB3278DC625003FED6B /* Avocados.xcdatamodeld in Sources */,
+				C6945DC7278E6B25003FED6B /* SettingsView.swift in Sources */,
 				C6945DA9278DC624003FED6B /* ContentView.swift in Sources */,
+				C61D4B3A2793C75200ADDC3E /* HeaderView.swift in Sources */,
+				C6945DBF278E6AC3003FED6B /* MainView.swift in Sources */,
+				C6945DC3278E6B08003FED6B /* RepeningView.swift in Sources */,
+				C6945DC1278E6AE5003FED6B /* RecipesView.swift in Sources */,
+				C6A457592795BBA9002B11C8 /* HeaderData.swift in Sources */,
 				C6945DA7278DC624003FED6B /* AvocadosApp.swift in Sources */,
+				C6A4575B2795C181002B11C8 /* DishesItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

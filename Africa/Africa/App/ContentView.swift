@@ -37,11 +37,10 @@ struct ContentView: View {
     }
     var body: some View {
         NavigationView {
-
         Group {
             if !isGridViewActive{
                 List {
-                    CoverImageView()
+                    CoverImageViewa()
                         .frame(height: 300)
                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                         .listRowBackground(Color.black)
