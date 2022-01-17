@@ -23,6 +23,7 @@
 		C6A457572795BB79002B11C8 /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A457562795BB79002B11C8 /* HeaderModel.swift */; };
 		C6A457592795BBA9002B11C8 /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A457582795BBA9002B11C8 /* HeaderData.swift */; };
 		C6A4575B2795C181002B11C8 /* DishesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A4575A2795C181002B11C8 /* DishesItemView.swift */; };
+		C6A4575D2795C340002B11C8 /* DishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A4575C2795C340002B11C8 /* DishesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		C6A457562795BB79002B11C8 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		C6A457582795BBA9002B11C8 /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
 		C6A4575A2795C181002B11C8 /* DishesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesItemView.swift; sourceTree = "<group>"; };
+		C6A4575C2795C340002B11C8 /* DishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				C6A4575A2795C181002B11C8 /* DishesItemView.swift */,
+				C6A4575C2795C340002B11C8 /* DishesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				C6A457572795BB79002B11C8 /* HeaderModel.swift in Sources */,
 				C6945DB0278DC625003FED6B /* Persistence.swift in Sources */,
 				C6945DB3278DC625003FED6B /* Avocados.xcdatamodeld in Sources */,
+				C6A4575D2795C340002B11C8 /* DishesView.swift in Sources */,
 				C6945DC7278E6B25003FED6B /* SettingsView.swift in Sources */,
 				C6945DA9278DC624003FED6B /* ContentView.swift in Sources */,
 				C61D4B3A2793C75200ADDC3E /* HeaderView.swift in Sources */,

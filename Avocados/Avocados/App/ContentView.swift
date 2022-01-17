@@ -26,6 +26,12 @@ struct ContentView: View {
                 }//: SCROLLVIEW
                 .ignoresSafeArea(.all)
                 .padding(0)
+                //MARK: - BODY
+                
+                DishesView()
+                    .padding()
+                    .frame(maxWidth: 600)
+                
                 //MARK: - FOOTER
                 Text("All About Avocados")
                     .font(.system(.title, design: .serif))
@@ -38,7 +44,6 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(.gray)
             }
-            .frame(maxWidth: 640)
             .padding(.bottom, 85)
         }
         .ignoresSafeArea(.all)
@@ -51,5 +56,7 @@ struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
         ContentView()
+            .previewDevice("iPad Air (4th generation)")
+.previewInterfaceOrientation(.landscapeLeft)
     }
 }

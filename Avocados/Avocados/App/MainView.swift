@@ -16,7 +16,7 @@ struct MainView: View {
                     Text("Avocados")
                 }
                 .ignoresSafeArea(edges: .all)
-            RecipesView()
+            ContentView()
                 .tabItem {
                     Image("tabicon-book")
                     Text("Recipes")
