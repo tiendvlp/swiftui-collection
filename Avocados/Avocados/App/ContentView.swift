@@ -27,17 +27,18 @@ struct ContentView: View {
                 .ignoresSafeArea(.all)
                 .padding(0)
                 //MARK: - BODY
-                
+                //MARK: - BODY - DISHES
+                Text("Avocados Dishes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
                 DishesView()
-                    .padding()
-                    .frame(maxWidth: 600)
+                    .frame(maxWidth: 640)
+          
                 
                 //MARK: - FOOTER
                 Text("All About Avocados")
-                    .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("ColorGreenAdaptive"))
-                    .padding(8)
+                    .modifier(TitleModifier())
                 
                 Text("Everything you wanted to know about avocados but were too afraid to ask.")
                     .font(.system(.body, design: .serif))
@@ -51,6 +52,14 @@ struct ContentView: View {
 
 }
 
+struct TitleModifier: ViewModifier {
+    func body (content: Content) -> some View {
+        content
+            .font(.system(.title, design: .serif))
+            .foregroundColor(Color("ColorGreenAdaptive"))
+            .padding(8)
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     

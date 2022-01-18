@@ -23,7 +23,6 @@ struct DishesItemView: View {
                     .frame(width: 40, height: 40)
                 Spacer()
                 Text(title)
-                    .font(.system(size: 16, weight: .medium, design: .rounded))
                     .foregroundColor(.gray)
                     .lineLimit(1)
                     .scaleEffect( x: isReverted ? -1 : 1)
@@ -33,6 +32,7 @@ struct DishesItemView: View {
                 Divider()
             }
         }
+        .font(.system(.callout))
         .scaleEffect(x: isReverted ? -1 : 1)
     }
 }

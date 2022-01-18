@@ -12,7 +12,7 @@ struct DishesView: View {
     
     //MARK: - BODY
     var body: some View {
-        HStack {
+        HStack(alignment: .center, spacing: 4) {
             VStack {
                 DishesItemView(title: "Toasts", image: "icon-toasts")
                 DishesItemView(title: "Tacos", image: "icon-tacos")
@@ -26,8 +26,7 @@ struct DishesView: View {
                     .clipShape(Capsule())
                     .frame(width: 1, height: 90)
                 Image(systemName: "heart.circle")
-                    .resizable()
-                    .frame(width: 30, height: 30)
+                    .font(Font.title.weight(.ultraLight))
                     .foregroundColor(.gray)
                 Rectangle()
                     .fill(.gray)
@@ -51,7 +50,7 @@ struct DishesView: View {
 struct DishesView_Previews: PreviewProvider {
     static var previews: some View {
         DishesView()
-            .previewLayout(.sizeThatFits)
+            .previewLayout(.fixed(width: 414, height: 280))
             .padding()
     }
 }
