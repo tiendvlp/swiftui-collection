@@ -10,6 +10,8 @@ import SwiftUI
 struct RecipeCardView: View {
     //MARK: - PROPERTEIS
     var recipe: Recipe
+    var hapticImpact = UIImpactFeedbackGenerator()
+    @State private var showModel: Bool = false
     //MARK: - BODY
     var body: some View {
         VStack (alignment: .leading, spacing: 0){
@@ -51,6 +53,13 @@ struct RecipeCardView: View {
             .padding()
             .padding(.bottom, 20)
             .padding(.horizontal, 12)
+            .onTapGesture {
+                hapticImpact.impactOccurred()
+                self.showModel = true
+            }
+            .sheet(isPresented: self.$showModel) {
+                RecipeDetailView(recipe: recipe)
+            }
         }
         .background(Color.white)
         .cornerRadius(12)
