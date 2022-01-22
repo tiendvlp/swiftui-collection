@@ -38,11 +38,12 @@ struct ItemRepeningView: View {
                             .clipShape(Circle())
                             .padding(15)
                     }
-                    //.offset( x:0,y: avocadoSlideFallDownAnimation ? 0 : -500)
-                    //.opacity(avocadoSlideFallDownAnimation ? 1 : 0)
-                    .animation(.spring(response: 0.8, dampingFraction: 0.5, blendDuration: 0.5).delay(01))
+                    .offset( x:0,y: avocadoSlideFallDownAnimation ? 0 : -500)
+                    .opacity(avocadoSlideFallDownAnimation ? 1 : 0)
                     .onAppear {
-                        avocadoSlideFallDownAnimation = true
+                        withAnimation(.spring(response: 0.8, dampingFraction: 0.5, blendDuration: 0.5)) {
+                            avocadoSlideFallDownAnimation = true
+                        }
                     }
                 }
                 .offset(y: 75)
